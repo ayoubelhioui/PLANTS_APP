@@ -13,7 +13,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.green),
+      // theme: ThemeData(primarySwatch: Colors('0xFF325A3E')),
       home: Scaffold(
         body: Column(
           children: [
@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(
                     fontFamily: 'Breadbary',
                     fontSize: 40,
-                    color: Colors.green,
+                    color: Color.fromARGB(255, 50, 90, 62),
                   ),
                 ),
               ],
