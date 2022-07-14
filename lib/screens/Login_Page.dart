@@ -15,45 +15,48 @@ class _LoginPageState extends State<LoginPage> {
       debugShowCheckedModeBanner: false,
       // theme: ThemeData(primarySwatch: Colors('0xFF325A3E')),
       home: Scaffold(
-        body: Column(
-          children: [
-            SizedBox(
-              child: Image.asset('assets/images/login_page.png'),
-              height: MediaQuery.of(context).size.height / 2.2,
-              // width: /*MediaQuery.of(context).size.width*/ double.infinity,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text(
-                  'Welcome ',
-                  style: TextStyle(
-                    fontFamily: 'Breadbary',
-                    fontSize: 40,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                child: Image.asset('assets/images/login_page.png'),
+                height: MediaQuery.of(context).size.height / 2.2,
+                // width: /*MediaQuery.of(context).size.width*/ double.infinity,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(
+                    'Welcome ',
+                    style: TextStyle(
+                      fontFamily: 'Breadbary',
+                      fontSize: 40,
+                    ),
                   ),
-                ),
-                Text(
-                  'Plants',
-                  style: TextStyle(
-                    fontFamily: 'Breadbary',
-                    fontSize: 40,
-                    color: Color.fromARGB(255, 50, 90, 62),
+                  Text(
+                    'Plants',
+                    style: TextStyle(
+                      fontFamily: 'Breadbary',
+                      fontSize: 40,
+                      color: Color.fromARGB(255, 50, 90, 62),
+                    ),
                   ),
-                ),
-              ],
-            ),
-            const Text(
-              'login to your account',
-              style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const LoginForm(),
-          ],
+                ],
+              ),
+              const Text(
+                'login to your account',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const LoginForm(),
+            ],
+          ),
         ),
       ),
     );

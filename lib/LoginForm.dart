@@ -42,14 +42,18 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final _formKey = GlobalKey<FormState>();
+    final _formKey = GlobalKey<FormState>();
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 30),
       // width: 270,
       child: Form(
+        key: _formKey,
         child: Column(
           children: [
             TextFormField(
+              validator: (value) {
+                if (value == null || value.isEmpty) return 'field is required';
+              },
               autofocus: true,
               decoration: const InputDecoration(
                 focusedBorder: InputBorder.none,
@@ -64,6 +68,9 @@ class LoginForm extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             TextFormField(
+              validator: (value) {
+                if (value == null || value.isEmpty) return 'field is required';
+              },
               obscureText: true,
               autofocus: true,
               decoration: const InputDecoration(
@@ -104,7 +111,9 @@ class LoginForm extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               height: 40,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  if (!_formKey.currentState!.validate()) return;
+                },
                 child: const Text('Login'),
                 style: ElevatedButton.styleFrom(
                   primary: const Color.fromARGB(255, 50, 90, 62),
