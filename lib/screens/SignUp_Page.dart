@@ -16,18 +16,17 @@ class _SignUpPageState extends State<SignUpPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 20),
             Container(
               margin: const EdgeInsets.only(left: 210),
               child: Image.asset('assets/images/SignUp_Page_flower.png'),
             ),
             const Text(
               'Register',
-              style: TextStyle(fontSize: 30),
+              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
             ),
             const Text(
               'Create your account',
-              style: TextStyle(color: Colors.grey),
+              style: TextStyle(color: Colors.grey, fontSize: 25),
             ),
             const SignUpForm(),
           ],

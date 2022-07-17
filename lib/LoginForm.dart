@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plants_app/screens/SignUp_Page.dart';
 
 class RememberMeCheckBox extends StatefulWidget {
   const RememberMeCheckBox({Key? key}) : super(key: key);
@@ -132,7 +133,14 @@ class LoginForm extends StatelessWidget {
                   style: TextStyle(color: Colors.grey),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const SignUpPage(),
+                      ),
+                    );
+                  },
                   child: const Text(
                     ' Sign up',
                     style: TextStyle(

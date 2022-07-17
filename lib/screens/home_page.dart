@@ -1,7 +1,25 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-class HomePage extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:plants_app/screens/Login_Page.dart';
+
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    Timer.periodic(const Duration(seconds: 3), (timer) {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (_) => const LoginPage()));
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

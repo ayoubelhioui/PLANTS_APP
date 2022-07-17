@@ -18,7 +18,7 @@ class _SignUpFormState extends State<SignUpForm> {
         child: Column(
           children: [
             const SizedBox(
-              height: 20,
+              height: 25,
             ),
             TextFormField(
               validator: (value) {
@@ -101,15 +101,68 @@ class _SignUpFormState extends State<SignUpForm> {
             const Text(
               'By signing you agree to our',
               style: TextStyle(
+                fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 50, 90, 62),
               ),
             ),
             const Text(
               'term of use and privacy policy',
-              style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.grey,
+                fontSize: 18,
+              ),
             ),
+            const SizedBox(height: 10),
             Image.asset('assets/images/SignUp_page_second.png'),
+            const SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 40,
+              child: ElevatedButton(
+                onPressed: () {
+                  if (!_formKey.currentState!.validate()) return;
+                },
+                child: const Text(
+                  'Sign Up',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: const Color.fromARGB(255, 50, 90, 62),
+                  shape: const StadiumBorder(),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Already have an account? ',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.grey,
+                    )),
+                InkWell(
+                  onTap: () => Navigator.pop(context),
+                  child: const Text(
+                    'Login',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Color.fromARGB(255, 50, 90, 62),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
