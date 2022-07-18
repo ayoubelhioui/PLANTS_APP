@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:plants_app/screens/SignUp_Page.dart';
-import '../screens/home_page.dart';
-import 'screens/Login_Page.dart';
+import 'package:plants_app/screens/home_page.dart';
+import 'screens/Splash_screen.dart';
 
 void main() {
   runApp(
