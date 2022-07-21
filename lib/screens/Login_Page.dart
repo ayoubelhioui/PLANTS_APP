@@ -23,9 +23,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: MediaQuery.of(context).size.height / 2.2,
                 // width: /*MediaQuery.of(context).size.width*/ double.infinity,
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
@@ -48,12 +46,12 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const Text(
                 'login to your account',
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey,
+                    fontSize: 20),
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 30),
               const LoginForm(),
             ],
           ),

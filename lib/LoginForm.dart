@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plants_app/screens/Home_Page.dart';
 import 'package:plants_app/screens/SignUp_Page.dart';
 
 class RememberMeCheckBox extends StatefulWidget {
@@ -77,9 +78,7 @@ class LoginForm extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 8,
-            ),
+            const SizedBox(height: 18),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -98,29 +97,34 @@ class LoginForm extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
               height: 40,
               child: ElevatedButton(
-                onPressed: () {},
-                child: const Text('Login'),
+                onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const HomePage(),
+                    )),
+                child: const Text(
+                  'Login',
+                  style: TextStyle(fontSize: 17),
+                ),
                 style: ElevatedButton.styleFrom(
                   primary: const Color.fromARGB(255, 50, 90, 62),
                   shape: const StadiumBorder(),
                 ),
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
                   'Don\'t have an account?',
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(color: Colors.grey, fontSize: 20),
                 ),
                 InkWell(
                   onTap: () {
@@ -136,6 +140,7 @@ class LoginForm extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 50, 90, 62),
+                      fontSize: 20,
                     ),
                   ),
                 ),
