@@ -107,23 +107,41 @@ class HomePage extends StatelessWidget {
                                   'assets/images/First_Recent_Viewed.jpg'),
                         ),
                       )),
+                  child: InkWell(
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const ShopPage(
+                            imagepath: 'assets/images/First_Recent_Viewed.jpg'),
+                      ),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(13.0),
+                      child: Image.asset(
+                        'assets/images/First_Recent_Viewed.jpg',
+                        width: MediaQuery.of(context).size.width / 2 - 40,
+                        // height: 200,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const ShopPage(
+                          imagepath: 'assets/images/Third_Recent_Viewed.jpg'),
+                    ),
+                  ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(13.0),
+                    borderRadius: BorderRadius.circular(10.0),
                     child: Image.asset(
-                      'assets/images/First_Recent_Viewed.jpg',
+                      'assets/images/Third_Recent_Viewed.jpg',
                       width: MediaQuery.of(context).size.width / 2 - 40,
                       height: 200,
                       fit: BoxFit.cover,
                     ),
-                  ),
-                ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10.0),
-                  child: Image.asset(
-                    'assets/images/Third_Recent_Viewed.png',
-                    width: MediaQuery.of(context).size.width / 2 - 40,
-                    height: 200,
-                    fit: BoxFit.cover,
                   ),
                 ),
               ],
@@ -132,45 +150,44 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(13.0),
-                  child: Image.asset(
-                    'assets/images/Fifth_Recent_Viewed.png',
-                    width: MediaQuery.of(context).size.width / 2 - 40,
-                    height: 200,
-                    fit: BoxFit.cover,
+                InkWell(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const ShopPage(
+                          imagepath: 'assets/images/Fifth_Recent_Viewed.jpg'),
+                    ),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(13.0),
+                    child: Image.asset(
+                      'assets/images/Fifth_Recent_Viewed.jpg',
+                      width: MediaQuery.of(context).size.width / 2 - 40,
+                      height: 200,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10.0),
-                  child: Image.asset(
-                    'assets/images/Fourth_Recent_Viewed.png',
-                    width: MediaQuery.of(context).size.width / 2 - 40,
-                    height: 200,
-                    fit: BoxFit.cover,
+                InkWell(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const ShopPage(
+                          imagepath: 'assets/images/Fourth_Recent_Viewed.jpg'),
+                    ),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10.0),
+                    child: Image.asset(
+                      'assets/images/Fourth_Recent_Viewed.jpg',
+                      width: MediaQuery.of(context).size.width / 2 - 40,
+                      height: 200,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ],
             ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: [
-            //     SizedBox(
-            //       child: Image.asset(
-            //         'assets/images/Fourth_Recent_Viewed.png',
-            //         width: MediaQuery.of(context).size.width / 2 - 40,
-            //         height: 200,
-            //       ),
-            //     ),
-            //     SizedBox(
-            //       child: Image.asset(
-            //         'assets/images/Fifth_Recent_Viewed.png',
-            //         width: MediaQuery.of(context).size.width / 2 - 40,
-            //         height: 200,
-            //       ),
-            //     ),
-            //   ],
-            // ),
             const SizedBox(height: 7),
             Row(
               children: const [
@@ -185,22 +202,6 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             const RecentWiewed(),
-            // const SizedBox(height: 15),
-            // const Text(
-            //   'Your feedback matters',
-            //   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            // ),
-            // const SizedBox(height: 14),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     Icon(Icons.star, color: Colors.yellow.shade700),
-            //     Icon(Icons.star, color: Colors.yellow.shade700),
-            //     Icon(Icons.star, color: Colors.yellow.shade700),
-            //     Icon(Icons.star_outline, color: Colors.yellow.shade700),
-            //     Icon(Icons.star_outline, color: Colors.yellow.shade700),
-            //   ],
-            // )
           ]),
         ),
       ),
